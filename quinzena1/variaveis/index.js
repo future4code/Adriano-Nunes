@@ -15,12 +15,12 @@ c = a
 b = c
 a = b
 
-console.log(a, b, c) //R: 10 10 10
+console.log(a, b, c) //R: Irá acontecer um erro pois a vairavel c nao foi definida
 
 EXERCICIO 3
 let p = prompt("Quantas horas você trabalha por dia?") R:let horasTrabalhadas = prompt("Quantas horas você trabalha por dia?")
 let t = prompt("Quanto você recebe por dia?") R: let pagamentoDia = prompt("Quanto você recebe por dia?")
-alert(`Voce recebe ${t/p} por hora`) R: alert ("Você recebe ${pagamentoDia/horasTrabalhadas} por hora")*/
+alert(`Voce recebe ${t/p} por hora`) R: alert (`Você recebe ${pagamentoDia/horasTrabalhadas} por hora`)*/
 
 let nome;
 let idade;
