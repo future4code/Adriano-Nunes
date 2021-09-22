@@ -24,7 +24,7 @@
 
 // b) i - EU GOSTO DE CENOURA - true
 //    ii - CENOURA É BOM PRA VISTA - true
-//    iii - CENOURAS CRESCEM NA TERRA - false
+//    iii - CENOURAS CRESCEM NA TERRA - true
 
 // ------------------------> EXERCÍCIOS DE CÓDIGO <------------------------
 // 1)
