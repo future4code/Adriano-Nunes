@@ -9,7 +9,7 @@ if (numero % 2 === 0) {
   console.log("Não passou no teste.")
 }*/
 
-//a) O teste é se o número inserido realizar uma operação matempatico. A operação é o resta da divisão.
+//a) O teste é se o número inserido realizar uma operação matemático. A operação é o resta da divisão.
 // O resultado para passar no teste é 0, se nao ter o resultado esperado, o teste não passa.
 //b) Números pares
 //c) Números ímpares
@@ -141,65 +141,85 @@ const tipoDeJogo = prompt("IN - Jogo Internacional ou DO - Jogo Nacional:")
 const etapaDoJogo = prompt("SF - semi-final; DT - decisão de terceiro lugar; FI - final:")
 const categoria = Number(prompt("Digite a categoria: 1, 2, 3 ou 4"))
 const quantidadeIngressos = Number(prompt("Digite a quantidade de ingressos a serem comprados:"))
-const precoIngresso = [
-    [1320, 880, 550, 220],
-    [660, 440, 330, 170],
-    [1980, 1320, 880, 330]
-]
+let precoIngresso 
 
-
-if(etapaDoJogo.toLocaleUpperCase() === "SF"){
-    if(categoria === 1){
-        precoIngresso[0.0]
-    } else if(categoria === 2){
-        precoIngresso[0.1]
-    } else if(categoria === 3){
-        precoIngresso[0.2]
-    } else {
-        precoIngresso[0.3]
-    }
+switch(etapaDoJogo){
+    case "SF":
+        switch(categoria){
+            case 1:
+                precoIngresso = 1320;
+                break;
+            case 2:
+                precoIngresso = 880;
+                break;
+            case 3:
+                precoIngresso = 550;
+                break;
+            case 4:
+                precoIngresso = 220;
+                break;
+            default:
+                precoIngresso = 0;
+                break;
+        }
+        break;
+    case "DT":
+        switch(categoria){
+            case 1:
+                precoIngresso = 660;
+                break;
+            case 2:
+                precoIngresso = 440;
+                break;
+            case 3:
+                precoIngresso = 330;
+                break;
+            case 4:
+                precoIngresso = 170;
+                break;
+            default:
+                precoIngresso = 0;
+                break;
+        }
+        break;
+    case "FI":
+        switch(categoria){
+            case 1:
+                precoIngresso = 1980;
+                break;
+            case 2:
+                precoIngresso = 1320;
+                break;
+            case 3:
+                precoIngresso = 880;
+                break;
+            case 4:
+                precoIngresso = 330;
+                break;
+            default:
+                precoIngresso = 0;
+                break;
+        }
+        break;
+    default:
+        break;
 }
 
-if(etapaDoJogo.toLocaleUpperCase() === "DT"){
-    if(categoria === 1){
-        precoIngresso[1, 0]
-    } else if(categoria === 2){
-        precoIngresso[1, 1]
-    } else if(categoria === 3){
-        precoIngresso[1, 2]
-    } else {
-        precoIngresso[1, 3]
-    }
+if(tipoDeJogo === "IN"){
+    precoIngresso = precoIngresso * 0.2439
 }
 
-if(etapaDoJogo.toLocaleUpperCase() === "FI"){
-    if(categoria === 1){
-        precoIngresso[2.0]
-    } else if(categoria === 2){
-        precoIngresso[2.1]
-    } else if(categoria === 3){
-        precoIngresso[2.2]
-    } else {
-        precoIngresso[2.3]
-    }
-}
 
-if(tipoDeJogo.toLocaleUpperCase() === "IN"){
-    precoIngresso * 0.2439
-} else {
-    precoIngresso * 1
-}
-
-const valorIngressoTotal = quantidadeIngressos * precoIngresso
+const valorTotalIngresso = precoIngresso * quantidadeIngressos
 
 console.log(`---DADOS DA COMPRA--- 
 Nome do Cliente: ${nomeCompleto}
 Tipo do Jogo: ${tipoDeJogo}
 Etapa do Jogo: ${etapaDoJogo}
-Catgoria: ${categoria}
+Categoria: ${categoria}
 Quantidade de Ingressos: ${quantidadeIngressos}
 ---VALORES---
 Valor do Ingresso: ${precoIngresso}
-Valor total: ${valorIngressoTotal}`)
+Valor total: ${valorTotalIngresso}`)
 
 
