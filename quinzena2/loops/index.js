@@ -17,7 +17,18 @@
 // }
 
 //a)RESPOSTA: Irá imprimir os numeros maiores de 18 que sao 19, 21, 23, 25, 27 e 30
-//b) RESPOSTA: Sim
+//b) RESPOSTA: Precisaria criar uma variavel indice e no fim do for colocar o indice como incremento
+
+// let indice = 0
+// const lista = [10, 11, 12, 15, 18, 19, 21, 23, 25, 27, 30]
+// for (let numero of lista) {
+//   if (numero > 18) {
+// 		console.log(numero, "indice", indice)
+// 	}
+
+//  indice++
+// }
+
 
 //3)
 // const quantidadeTotal = Number(prompt("Digite a quantidade de linhas: "))
@@ -118,3 +129,20 @@
 
 // console.log(verificarNumero(array))
 
+//----------------------- DESAFIOS 1 e 2
+const jogo = confirm("Vamos jogar!");
+const numeroEscolhido = 5;
+
+let numeroChutado;
+
+for(let contador = 1; numeroChutado !== numeroEscolhido; contador++){
+    numeroChutado = Number(prompt("Chute um número de 0 a 100"))
+    if(numeroEscolhido > numeroChutado){
+        console.log(`O número chutado foi ${numeroChutado}. ERROU, o número é maior!!! Tente novamente`);
+    } else if(numeroChutado > numeroEscolhido){
+        console.log(`O número chutado foi ${numeroChutado}. ERROU, o número é menor!!! Tente novamente`)
+    } else {
+        console.log("Parabéns! Você acertou!");
+        console.log(`Números de tentativas: ${contador}`)
+    }
+}
