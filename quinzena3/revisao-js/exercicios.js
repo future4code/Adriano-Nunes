@@ -1,11 +1,22 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
-
+  let numerosInvertidos = [];
+  for(let i = array.length-1; i >= 0; i--){
+    numerosInvertidos.push(array[i]);
+  }
+  return numerosInvertidos;
+  
 }
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-
+  let arrayNumeros = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i] % 2 === 0){
+      arrayNumeros.push(array[i]**2);
+    }
+  }
+  return arrayNumeros;
 }
 
 // EXERCÍCIO 03
