@@ -32,10 +32,9 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
-  let numeros = array;
-  let maiorNumero = numeros[0];
+  let maiorNumero = array[0];
   for(let i = 0; i < array.length; i++){
-    let numeroDaVez = numeros[i];
+    let numeroDaVez = array[i];
     if(numeroDaVez > maiorNumero){
       maiorNumero = numeroDaVez;
     }
