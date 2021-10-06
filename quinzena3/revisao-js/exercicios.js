@@ -70,10 +70,8 @@ function retornaExpressoesBooleanas() {
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
   let numperosPares = [];
-  for(let i = 0; n.length < n; i++){
-    if(i % 2 === 0){
-      numperosPares.push(i);
-    }
+  for(let i = 0; i < n; i++){
+      numperosPares.push(i*2);
   }
   return numperosPares;
 }
