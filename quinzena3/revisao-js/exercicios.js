@@ -78,19 +78,43 @@ function retornaNNumerosPares(n) {
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-  // return 'Escaleno'
-  // return 'Equilátero'
-  // return 'Isósceles'
+  let ladoA = a;
+  let ladoB = b;
+  let ladoC = c;
+
+  if(ladoA === ladoB && ladoA === ladoC && ladoB === ladoC) {
+    return "Equilátero";
+  } else if(ladoA === ladoB && ladoA != ladoC || ladoA == ladoC && ladoA !=ladoB){
+    return "Isósceles"
+  } else if(ladoA != ladoB !=ladoC){
+    return "Escaleno"
+  }
+  
 }
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
-  // Formato do objeto a ser retornado:
-  // {
-  //   maiorNumero: X,
-  //   maiorDivisivelPorMenor: Y,
-  //   diferenca: Z
-  // }
+  if(num1 > num2) {
+    let numeroMaior = num1;
+    let divisao = num1 / num2;
+    let diferenca = num1 - num2;
+
+    return numeroMaior, divisao, diferenca
+
+  } else if(num2 > num1) {
+    let numeroMaior = num2;
+    let divisao = num2 / num1;
+    let diferenca = num2 - num1;
+
+    return maiorNumero, divisao, diferenca
+  }
+
+  let resultado = {
+    maiorNumero: maiorNumero,
+    maiorDivisilPorMenor: divisao,
+    diferenca: diferenca
+  }
+  
 }
 
 // EXERCÍCIO 10
