@@ -151,13 +151,18 @@ function imprimeChamada() {
   }
 
   return `Venha assistir ao filme ${astrodev.nome}, de ${astrodev.ano}, dirigido por ${astrodev.diretor} e estrelado por ${astrodev.atores[0]}, ${astrodev.atores[1]}, ${astrodev.atores[2]}, ${astrodev.atores[3]}.`
-  
-  // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
 }
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
+  const retangulo = {
+    largura: lado1,
+    altura: lado2,
+    perimetro: 2 * (lado1 + lado2),
+    area: lado1 * lado2
+  }
 
+  return retangulo;
 }
 
 // EXERCÍCIO 15
