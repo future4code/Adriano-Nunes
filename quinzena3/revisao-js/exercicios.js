@@ -105,7 +105,7 @@ function comparaDoisNumeros(num1, num2) {
       diferenca: diferenca
     }
 
-  } else if(num2 >= num1) {
+  } else {
     let maiorNumero = num2;
     let maiorDivisivelPorMenor = num2 % num1 === 0;
     let diferenca = num2 - num1;
@@ -120,12 +120,23 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
-
+  
 }
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
 
+  let arrayCrescente = [];
+  for(item of array){
+    let posicaoArray = 0;
+    for(itemComparado of array){
+      if(item > itemComparado){
+        posicaoArray++;
+      }
+    }
+    arrayCrescente[posicaoArray] = item;
+  }
+  return arrayCrescente;
 }
 
 // EXERCÍCIO 12
