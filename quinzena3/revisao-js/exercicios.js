@@ -239,7 +239,12 @@ function verificaParidade(array) {
 
 // EXERCÍCIO 18A
 function retornaPessoasAutorizadas(pessoas) {
-
+  const permissao = pessoas.filter((item) => {
+    if(item.idade > 14 && item.idade < 60 && item.altura >= 1.5){
+      return pessoas
+    }
+  })
+  return permissao
 }
 
 // EXERCÍCIO 18B
