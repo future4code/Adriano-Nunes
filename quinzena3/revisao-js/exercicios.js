@@ -130,7 +130,7 @@ function segundoMaiorEMenor(array) {
     }
     arrayOriginal[posicaoNoArray] = item;
   }
-  return [arrayOriginal[novaArray.length - 2], arrayOriginal[1]];
+  return [arrayOriginal[arrayOriginal.length - 2], arrayOriginal[1]];
   //                 descibrir o segundo maior, e o segundo menor
 }
 
@@ -195,12 +195,10 @@ function anonimizaPessoa(pessoa) {
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
-  // arrayDePessoas.filter((idade) =>{
-  //   if(idade >= 18){
-  //     arrayDePessoas.push()
-  //   }
-  //   return arrayDePessoas
-  // })
+  const maioresDeIdade = arrayDePessoas.filter((item) =>{
+    return item.idade >= 18
+  })
+  return maioresDeIdade
 
 }
 
