@@ -131,7 +131,7 @@ function segundoMaiorEMenor(array) {
     arrayOriginal[posicaoNoArray] = item;
   }
   return [arrayOriginal[arrayOriginal.length - 2], arrayOriginal[1]];
-  //                 descibrir o segundo maior, e o segundo menor
+  //                 descobrir o segundo maior, e o segundo menor
 }
 
 // EXERCÍCIO 11
@@ -211,7 +211,9 @@ function menoresDe18(arrayDePessoas) {
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
-
+  const arrayNovo = array;
+  const multiplicacao = arrayNovo.map(item => item * 2);
+  return multiplicacao;
 }
 
 // EXERCÍCIO 17B
