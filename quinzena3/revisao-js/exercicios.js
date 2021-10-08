@@ -120,21 +120,31 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
-  
+  let arrayOriginal = [];
+  for(item of array){
+    let posicaoNoArray = 0;
+    for(outroItem of array){
+      if(item > outroItem){
+        posicaoNoArray++;
+      }
+    }
+    arrayOriginal[posicaoNoArray] = item;
+  }
+  return [arrayOriginal[novaArray.length - 2], arrayOriginal[1]];
+  //                 descibrir o segundo maior, e o segundo menor
 }
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-
   let arrayCrescente = [];
   for(item of array){
-    let posicaoArray = 0;
+    let contador = 0;
     for(itemComparado of array){
       if(item > itemComparado){
-        posicaoArray++;
+        contador++;
       }
     }
-    arrayCrescente[posicaoArray] = item;
+    arrayCrescente[contador] = item;
   }
   return arrayCrescente;
 }
@@ -185,6 +195,12 @@ function anonimizaPessoa(pessoa) {
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
+  // arrayDePessoas.filter((idade) =>{
+  //   if(idade >= 18){
+  //     arrayDePessoas.push()
+  //   }
+  //   return arrayDePessoas
+  // })
 
 }
 
