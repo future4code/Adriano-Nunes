@@ -218,8 +218,11 @@ function multiplicaArrayPor2(array) {
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
-
+  const array17B = array;
+  const retornaString = array17B.map(item => item * 2);
+  return retornaString.map(String);
 }
+
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {
