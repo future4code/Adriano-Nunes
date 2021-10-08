@@ -226,7 +226,15 @@ function multiplicaArrayPor2S(array) {
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {
-
+  let array18C = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i] % 2 === 0){
+      array18C.push(`${array[i]} é par`);
+    } else {
+      array18C.push(`${array[i]} é ímpar`);
+    }
+  }
+  return array18C.map(String);
 }
 
 // EXERCÍCIO 18A
