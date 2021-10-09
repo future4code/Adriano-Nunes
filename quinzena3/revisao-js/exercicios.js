@@ -269,5 +269,12 @@ function ordenaPorData(consultasData) {
 
 // EXERCÍCIO 20
 function calculaSaldo(contas) {
-
+  // const extrato = (x, y) => x + y;
+  // const saldo = contas => {
+  //   contas.map(item => ({
+  //     ...contas,
+  //     saldoTotal: item.saldoTotal - item.compras.reduce(extrato, 0)
+  //   }));
+  // }
+  // return saldo;
 }
