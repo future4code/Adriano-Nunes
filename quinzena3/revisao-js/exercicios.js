@@ -1,4 +1,5 @@
 // EXERCÍCIO 01
+// Escreva uma função que recebe um array como parâmetro e retorne este array invertido.
 function inverteArray(array) {
   let numerosInvertidos = [];
   for(let i = array.length-1; i >= 0; i--){
@@ -9,6 +10,7 @@ function inverteArray(array) {
 }
 
 // EXERCÍCIO 02
+// Escreva uma função que recebe um array de números e retorna um array com os números pares elevados a 2.
 function retornaNumerosParesElevadosADois(array) {
   let arrayNumeros = [];
   for(let i = 0; i < array.length; i++){
@@ -20,6 +22,7 @@ function retornaNumerosParesElevadosADois(array) {
 }
 
 // EXERCÍCIO 03
+//Escreva uma função que receba um array de números e retorne um novo array com apenas os números pares desse array de entrada.
 function retornaNumerosPares(array) {
   let numerosPares = [];
   for(let i = 0; i < array.length; i++){
@@ -31,6 +34,7 @@ function retornaNumerosPares(array) {
 }
 
 // EXERCÍCIO 04
+//Escreva uma função que receba um array de números e retorne o maior número dele.
 function retornaMaiorNumero(array) {
   let maiorNumero = array[0];
   for(let i = 0; i < array.length; i++){
@@ -43,12 +47,14 @@ function retornaMaiorNumero(array) {
 }
 
 // EXERCÍCIO 05
+// Escreva uma função que recebe um array como parâmetro e retorna a quantidade de elementos que há nele.
 function retornaQuantidadeElementos(array) {
   let outroArray = array.length;
   return outroArray;
 }
 
 // EXERCÍCIO 06
+//
 function retornaExpressoesBooleanas() {
   const booleano1 = true;
   const booleano2 = false;
@@ -68,6 +74,7 @@ function retornaExpressoesBooleanas() {
 }
 
 // EXERCÍCIO 07
+// Escreva uma função que, recebendo um número N como parâmetro, retorne os N primeiros números pares (por exemplo, se N for 3, você deve imprimir 0, 2 e 4; se N for 5, deve retornar 0, 2, 4, 6 e 8). 
 function retornaNNumerosPares(n) {
   let numperosPares = [];
   for(let i = 0; i < n; i++){
@@ -77,6 +84,7 @@ function retornaNNumerosPares(n) {
 }
 
 // EXERCÍCIO 08
+
 function checaTriangulo(a, b, c) {
   let ladoA = a;
   let ladoB = b;
@@ -259,22 +267,54 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {
-
+  for(let i = 0; i < consultasNome.length; i++) {
+    for(let j = 0; j < consultasNome.length - i - 1; j++) {
+      if(consultasNome[j].nome > consultasNome[j + 1].nome) {
+        const temp = consultasNome[j]
+        consultasNome[j] = consultasNome[j + 1]
+        consultasNome[j + 1] = temp
+      }
+    }
+  }
+  return consultasNome
 }
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {
+  for(let i = 0; i < consultasData.length; i++) {
+    for(let j = 0; j < consultasData.length - i - 1; j++) {
 
+      const arrayData1 = consultasData[j].dataDaConsulta.split('/')
+      const dia1 = Number(arrayData1[0])
+      const mes1 = Number(arrayData1[1])
+      const ano1 = Number(arrayData1[2])
+
+      const arrayData2 = consultasData[j + 1].dataDaConsulta.split('/')
+      const dia2 = Number(arrayData2[0])
+      const mes2 = Number(arrayData2[1])
+      const ano2 = Number(arrayData2[2])
+
+      const data1 = new Date(ano1, mes1 -1, dia1).getTime()
+      const data2 = new Date(ano2, mes2-1, dia2).getTime()
+
+      if(data1 > data2) {
+        const temp = consultasData[j]
+        consultasData[j] = consultasData[j + 1]
+        consultasData[j + 1] = temp
+      }
+    }
+  }
+  return consultasData
 }
 
 // EXERCÍCIO 20
 function calculaSaldo(contas) {
-  // const extrato = (x, y) => x + y;
-  // const saldo = contas => {
-  //   contas.map(item => ({
-  //     ...contas,
-  //     saldoTotal: item.saldoTotal - item.compras.reduce(extrato, 0)
-  //   }));
-  // }
-  // return saldo;
+  contas.forEach((conta) => {
+    let totalDeCompras = 0
+    conta.compras.forEach((valor) => {
+      totalDeCompras += valor
+    })
+    conta.saldoTotal -= totalDeCompras
+  })
+  return contas
 }
