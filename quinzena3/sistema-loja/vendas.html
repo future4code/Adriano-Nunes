@@ -4,28 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Resenha dos Boleiros</title>
 </head>
 <body>
-    <header>
-        <div>
+    <header class="cabecalho">
+        <div class="cabecalho__logo">
            <a href="https://www.instagram.com/resenhaboleiros2021/" target="_blank">
-                <img src="img/Resenha-Boleiros.png" alt="Logotipo Resenha dos Boleiros">
+                <img class="logo" src="img/Resenha-Boleiros.png" alt="Logotipo Resenha dos Boleiros">
             </a> 
         </div>
 
-        <div>
-            <a href="index.html">Página Inicial</a>
-            <a href="ctrl-estoque.html">Controle de Estoque</a>
-            <a href="add-produto.html">Adicionar Produto</a>
-            <a href="funcionarios.html">Funcionários</a>
-            <a href="vendas.html">Faça Seu Pedido</a>
-            <a href="historico-vendas.html">Histórico de Vendas</a>
+        <div class="cabecalho__menu">
+            <a class="menu" href="index.html">Página Inicial</a>
+            <a class="menu" href="ctrl-estoque.html">Controle de Estoque</a>
+            <a class="menu" href="funcionarios.html">Funcionários</a>
+            <a class="menu" href="historico-vendas.html">Histórico de Vendas</a>
         </div>
     </header>
 
     <main>
-        
+        <h2>Faça Seu Pedido de Sua Camisa</h2>
+        <form action="historico-vendas.html">
+            <div>
+                <label for="camisa">Escolha a Camisa</label>
+                <input type="text" id="modelo-camisa" name="camisa">
+            </div>
+
+            <div>
+                <label for="genero">Gênero</label>
+                <select id="genero-camisa" name="genero">
+                    <option value="F">Feminina</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="tamanho">Escolha o Tamanho da Camisa</label>
+                <select id="tamanho-camisa" name="tamanho">
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                    <option value="EGG">EGG</option>
+                    <option value="Infantil">Infantil</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="numero">Escolha o Número da Camisa</label>
+                <input type="number" id="numero-camisa" name="numero">
+            </div>
+
+            <div>
+                <label for="patch">Escolha o Patch da Camisa</label>
+                <input type="text" id="patch-camisa" name="patch">
+            </div>
+
+            <div>
+                <label for="pagamento">Forma de Pagamento</label>
+                <select id="pagamento-camisa" name="pagamento">
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartão</option>
+                </select>
+            </div>
+        </form>
     </main>
     
     <footer>

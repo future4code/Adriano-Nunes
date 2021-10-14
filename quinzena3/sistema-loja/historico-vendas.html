@@ -4,28 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Resenha dos Boleiros</title>
 </head>
 <body>
-    <header>
-        <div>
+    <header class="cabecalho">
+        <div class="cabecalho__logo">
            <a href="https://www.instagram.com/resenhaboleiros2021/" target="_blank">
-                <img src="img/Resenha-Boleiros.png" alt="Logotipo Resenha dos Boleiros">
+                <img class="logo" src="img/Resenha-Boleiros.png" alt="Logotipo Resenha dos Boleiros">
             </a> 
         </div>
 
-        <div>
-            <a href="index.html">Página Inicial</a>
-            <a href="ctrl-estoque.html">Controle de Estoque</a>
-            <a href="add-produto.html">Adicionar Produto</a>
-            <a href="funcionarios.html">Funcionários</a>
-            <a href="vendas.html">Faça Seu Pedido</a>
-            <a href="historico-vendas.html">Histórico de Vendas</a>
+        <div class="cabecalho__menu">
+            <a class="menu" href="index.html">Página Inicial</a>
+            <a class="menu" href="ctrl-estoque.html">Controle de Estoque</a>
+            <a class="menu" href="add-produto.html">Adicionar Produto</a>
+            <a class="menu" href="vendas.html">Faça Seu Pedido</a>
         </div>
     </header>
 
     <main>
+        <h2>Histórico de Vendas</h2>
+        <div>
+            <ul id="lista">
+                <li id="pedido">Pedido: 1</li>
+                <li id="cliente">Cliente: Keianne Zaze</li>
+                <li id="vendedor">Vendedor: Adriano</li>
+                <li id="produto-escolhido">Produto Escolhido: Camisa Adidas Internacional I 21/22</li>
+                <li id="quantidade">Quantidade: 01</li>
+                <li id="valor-compra">Valor da Compra: R$189,90</li>
+                <li id="forma-pagamento">Forma de Pagamento: Cartão de Crédito</li>
+                <li id="dia-compra">Dia e Horário da Compra: 10/10/2021 às 13:20hr</li>
+            </ul>
+        </div>
+       
+        <div>
+            <ul id="lista">
+                <li id="pedido">Pedido: 2</li>
+                <li id="cliente">Cliente: Yuri Alberto</li>
+                <li id="vendedor">Vendedor: Affonso</li>
+                <li id="produto-escolhido">Produto Escolhido: Camisa Nike Chelsea I 21/22</li>
+                <li id="quantidade">Quantidade: 01</li>
+                <li id="valor-compra">Valor da Compra: R$249,90</li>
+                <li id="forma-pagamento">Forma de Pagamento: Dinheiro</li>
+                <li id="dia-compra">Dia e Horário da Compra: 12/10/2021 às 08:45hr</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul id="lista">
+                <li id="pedido">Pedido: 3</li>
+                <li id="cliente">Cliente: Andrés D'Alessandro</li>
+                <li id="vendedor">Vendedor: Adriano</li>
+                <li id="produto-escolhido">Produto Escolhido: Camisa Adidas Internacional III 21/22</li>
+                <li id="quantidade">Quantidade: 03</li>
+                <li id="valor-compra">Valor da Compra: R$749,70</li>
+                <li id="forma-pagamento">Forma de Pagamento: Cartão de Crédito</li>
+                <li id="dia-compra">Dia e Horário da Compra: 13/10/2021 às 21:00hr</li>
+            </ul>
+        </div>
+
         
+
+
     </main>
     
     <footer>
