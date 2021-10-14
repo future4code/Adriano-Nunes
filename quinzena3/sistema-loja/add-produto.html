@@ -20,7 +20,7 @@
 
     
     <h2>Adicionar Produto</h2>
-    <form action="">
+    <form action="ctrl-estoque.html">
         <div>
             <label for="link-foto">Link para foto: </label>
             <input type="url" id="link-foto" name="link-foto">
@@ -29,24 +29,24 @@
         <div>
             <label for="descricao">Descrição do produto: </label>
             <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="" name="descrição">
+            <input type="text" id="nome-do-produto" name="descrição">
         </div>
         
         <div>
             <label for="preco">Preço (em R$): </label>
             <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="" id="" name="preço">
+            <input type="number" id="preco-do-produto" name="preço">
         </div>
         
         <div>
             <!-- Preencha as propriedades necessárias para os elementos abaixo -->
             <label>Quantidade disponível: </label>
-            <input>
+            <input type="number" id="quantidade-disponivel" name="quantidade">
         </div>
 
         <div class="form-add">
             <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <button type="">Adicionar</button>
+            <button type="submit">Adicionar</button>
         </div>
 
     </form>
