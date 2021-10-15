@@ -1,6 +1,7 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .cabecalho {
     background-color: #6baa75 ;
     display: flex;
@@ -11,6 +12,7 @@ html {
     height: 100px;
     padding: 10px 10px;
 }
+
 .cabecalho__menu{
     padding-top: 50px;
 }
@@ -19,9 +21,12 @@ html {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    padding: 50px 20px;
+    padding: 10px 10px;
     margin-left: 100px;
     text-align: center;
+    border: 2px ridge black;
+    border-radius: 10px;
+    background-color: darkgray;
 }
 
 .menu:hover{
@@ -36,26 +41,27 @@ html {
 
 .paragrafo__principal{
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    font-size: 25px;
+    font-style: italic;
 }
 
 .principal__topico-personalizacao{
     width: 85%;
     margin-top: 10px;
-    text-align: right;
+    text-align: left;
     padding: 0 20px;
 }
 
 .principal__topicos-qualidade{
-    width: 85%;
-    align-items: left;
-
-    padding: 0 50px;
+    padding: 10px 20px;
+    text-align: right;
+    align-items: center;
 }
 
 .img-secundaria{
-    width: 500px;
-    height: 250px;
+    width: 600px;
+    height: 300px;
 }
 
 .rodape {
@@ -72,4 +78,115 @@ html {
 .img-rodape {
     width: 35px;
     height: 35px;
+}
+
+.titulo__secundario-pedido {
+    text-align: center;
+}
+
+.principal__vendas{
+    text-align: center;
+    padding: 10px 350px;
+}
+
+form {
+    width: 500px;
+    height: 500px;
+    background-color: #d3d3d3;
+    padding: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    
+}
+
+.formulario {
+    padding: 20px 0;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    border: 1.5px solid black;
+}
+
+select {
+    height: 30px;
+    text-align: center;
+    border:  1.5px solid black;
+    font-size: 16px;
+}
+
+#btn-pedido{
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1.5px solid black;
+    text-transform: uppercase;
+    background-color: rgba(255, 166, 0, 0.836);
+}
+
+.tabela-estoque{
+    padding: 10px 350px;
+}
+
+td, th{
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
+    background-color:#F5DEB3;
+}
+
+.img-estoque {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+#lista{
+    font-size: 14px;
+    width: 450px;
+    margin-left: 350px;
+    padding: 20px 50px;
+    border: 1px solid black;
+    
+}
+
+#lista-funcionarios{
+    margin-left: 350px;
+}
+
+.filtrar{
+    text-align: center;
+
+}
+
+#filtrar-compra{
+    width: 300px;
+}
+
+#btn-filtrar{
+    width: 100px;
+    height: 38px;
+    font-weight: bold;
+    border: 1.5px solid black;
+    text-transform: uppercase;
+    background-color: orange;
+}
+
+#form-add{
+    width: 500px;
+    height: 400px;
+    background-color: #d3d3d3;
+    padding: 30px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 350px;
+}
+
+iframe{
+    margin-left: 320px;
+    padding: 50px 10px;
+    
 }

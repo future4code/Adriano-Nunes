@@ -18,29 +18,29 @@
         <div class="cabecalho__menu">
             <a class="menu" href="index.html">Página Inicial</a>
             <a class="menu" href="ctrl-estoque.html">Controle de Estoque</a>
-            <a class="menu" href="funcionarios.html">Funcionários</a>
+            <a class="menu" href="funcionarios.html">Quem Somos</a>
             <a class="menu" href="historico-vendas.html">Histórico de Vendas</a>
         </div>
     </header>
 
-    <main>
-        <h2 class="titulo__secundario">Faça Seu Pedido de Sua Camisa</h2>
-        <form action="historico-vendas.html">
-            <div>
-                <label for="camisa">Escolha a Camisa</label>
+    <main class="principal__vendas">
+        <h2 class="titulo__secundario-pedido">Faça Seu Pedido de Sua Camisa</h2>
+        <form action="#">
+            <div class="formulario">
+                <label for="camisa">Escolha a Camisa:</label>
                 <input type="text" id="modelo-camisa" name="camisa">
             </div>
 
-            <div>
-                <label for="genero">Gênero</label>
+            <div class="formulario">
+                <label for="genero">Gênero:</label>
                 <select id="genero-camisa" name="genero">
                     <option value="F">Feminina</option>
                     <option value="Masculino">Masculino</option>
                 </select>
             </div>
             
-            <div>
-                <label for="tamanho">Escolha o Tamanho da Camisa</label>
+            <div class="formulario">
+                <label for="tamanho">Escolha o Tamanho da Camisa:</label>
                 <select id="tamanho-camisa" name="tamanho">
                     <option value="P">P</option>
                     <option value="M">M</option>
@@ -51,22 +51,26 @@
                 </select>
             </div>
 
-            <div>
-                <label for="numero">Escolha o Número da Camisa</label>
+            <div class="formulario">
+                <label for="numero">Escolha o Número da Camisa:</label>
                 <input type="number" id="numero-camisa" name="numero">
             </div>
 
-            <div>
-                <label for="patch">Escolha o Patch da Camisa</label>
+            <div class="formulario">
+                <label for="patch">Escolha o Patch da Camisa:</label>
                 <input type="text" id="patch-camisa" name="patch">
             </div>
 
-            <div>
-                <label for="pagamento">Forma de Pagamento</label>
+            <div class="formulario">
+                <label for="pagamento">Forma de Pagamento:</label>
                 <select id="pagamento-camisa" name="pagamento">
                     <option value="dinheiro">Dinheiro</option>
                     <option value="cartao">Cartão</option>
                 </select>
+            </div>
+
+            <div class="formulario">
+                <button id="btn-pedido" type="submit">Enviar o Pedido</button>
             </div>
         </form>
     </main>

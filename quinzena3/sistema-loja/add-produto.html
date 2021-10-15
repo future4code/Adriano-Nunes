@@ -25,34 +25,30 @@
     </header>
 
     <main>
-        <div>
-            <p>Resenha dos Boleiros</p>
-        </div>
-        
-        <h2>Adicionar Produto</h2>
-        <form action="ctrl-estoque.html">
-            <div>
+        <h2 class="titulo__secundario-pedido">Adicionar Produto</h2>
+        <form id="form-add" action="ctrl-estoque.html">
+            <div class="formulario">
                 <label for="link-foto">Link para foto: </label>
                 <input type="url" id="link-foto" name="link-foto">
             </div>
             
-            <div>
+            <div class="formulario">
                 <label for="descricao">Descrição do produto: </label>
                 <input type="text" id="nome-do-produto" name="descrição">
             </div>
             
-            <div>
+            <div class="formulario">
                 <label for="preco">Preço (em R$): </label>
                 <input type="number" id="preco-do-produto" name="preço">
             </div>
             
-            <div>
+            <div class="formulario">
                 <label for="quantidade">Quantidade disponível: </label>
                 <input type="number" id="quantidade-disponivel" name="quantidade">
             </div>
     
-            <div class="form-add">
-                <button type="submit">Adicionar</button>
+            <div class="formulario">
+                <button id="btn-pedido" type="submit">Adicionar</button>
             </div>
         </form>
     </main>
