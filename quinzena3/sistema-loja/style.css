@@ -4,7 +4,6 @@ html {
 .cabecalho {
     background-color: #6baa75 ;
     display: flex;
-    
 }
 
 .logo {
@@ -23,9 +22,54 @@ html {
     padding: 50px 20px;
     margin-left: 100px;
     text-align: center;
-   
 }
 
 .menu:hover{
     color:brown;
+}
+
+.titulo__principal {
+    text-align: center;
+    font-size: 40px;
+    
+}
+
+.paragrafo__principal{
+    text-align: center;
+    padding: 20px;
+}
+
+.principal__topico-personalizacao{
+    width: 85%;
+    margin-top: 10px;
+    text-align: right;
+    padding: 0 20px;
+}
+
+.principal__topicos-qualidade{
+    width: 85%;
+    align-items: left;
+
+    padding: 0 50px;
+}
+
+.img-secundaria{
+    width: 500px;
+    height: 250px;
+}
+
+.rodape {
+    background-color: #6baa75;
+    text-align: center;
+}
+
+.rodape__paragrafo{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+.img-rodape {
+    width: 35px;
+    height: 35px;
 }
