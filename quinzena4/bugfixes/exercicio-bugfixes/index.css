@@ -84,7 +84,8 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
-    padding-top: 100px;
+    padding: 100px;
+    height: auto;
     
 }
 
@@ -92,8 +93,14 @@ div img {
     padding: 15px 0px;
 }
 
-#container-para-comprar, #container-para-botao-compra {
+#container-para-comprar {
     background-color: #e7eb90;
+    height: auto;
+}
+
+#container-para-botao-compra{
+    background-color: #e7eb90;
+    height: 100px;
 }
 
 #container-para-comprar>p {
@@ -144,8 +151,10 @@ td button {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    margin: 10% 45%;
 }
 
 #back-button:hover {
     background-color: #635a3d
 }
+
