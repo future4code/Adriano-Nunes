@@ -91,7 +91,10 @@ div img {
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+    margin: 0 35%;
+    
 }
+
 
 #container-para-comprar {
     background-color: #e7eb90;
