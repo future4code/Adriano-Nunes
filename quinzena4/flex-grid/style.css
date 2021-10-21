@@ -56,14 +56,31 @@ section{
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.cards-produtos{
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 2px 2px darkgray;
+}
+
+.titulo-produto{
+    text-align: center;
+    padding: 5px 0;
+}
+
+.descricao-produto{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
 .img-menu{
     width: 20px;
     height: 20px;
 }
 
 .img-produtos{
-    width: 220px;
-    height: 220px;
+    width: 230px;
+    height: 230px;
 }
 
 .menu-links{
