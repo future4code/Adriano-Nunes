@@ -45,11 +45,34 @@ button{
 
 main{
     flex-grow: 1;
+    display: flex;
+}
+
+nav{
+    width: 450px;
+    background-color: #f2d0e0;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.img-menu{
+    width: 20px;
+    height: 20px;
+}
+
+.img-produtos{
+    width: 220px;
+    height: 220px;
 }
 
 footer{
     height: 100px;
     background-color: mediumvioletred;
+    padding: 10px 15px;
+    font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
