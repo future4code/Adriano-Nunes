@@ -11,7 +11,7 @@
 }
 
 header{
-    height: 120px;
+    height: 100px;
     background-color: mediumvioletred;
     padding: 10px 15px;
     display: flex;
@@ -48,6 +48,9 @@ main{
 }
 
 footer{
-    height: 120px;
+    height: 100px;
     background-color: mediumvioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
