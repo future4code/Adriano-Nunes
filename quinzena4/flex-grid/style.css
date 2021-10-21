@@ -41,8 +41,6 @@ button{
     border-radius: 2px;
 }
 
-
-
 main{
     flex-grow: 1;
     display: flex;
@@ -66,6 +64,26 @@ section{
 .img-produtos{
     width: 220px;
     height: 220px;
+}
+
+.menu-links{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.menu-img-descricao{
+    width: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    padding-left: 20px;
 }
 
 footer{
