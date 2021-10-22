@@ -38,63 +38,71 @@
     flex-grow: 1;
     background-color:#321249;
     display: grid;
-    grid-template-columns: 1fr 200px 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 10px;
-    justify-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
-    justify-self: center;
-}
-
-.formacao-biologo, .formacao-senac, .formacao-labenu{
-    padding: 30px 10px;
-}
-.formacao-senac{
-    grid-column: 3 / 4;
-    display: grid;
-}
-
-.formacao-biologo{
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-}
+    row-gap: 15px;
     
-.img-logo-labenu{
-    width: 400px;
-    height: 150px;
-    padding: 10px 0;
+}
+.card-principal{
+    display: grid;
+    justify-items: start;
+    padding: 2px 50px;
 }
 
-.img-logo-senac{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    padding: 10px 0;
+.card-secundario{
+    display: grid;
+    justify-items: center;
 }
 
-.img-link{
-   display: grid;
-   justify-content: center;
+.card-terceiro{
+    display: grid;
+    justify-items: end;
+    padding: 2px 50px;
 }
 
-.img-logo-biologo{
-    border-radius: 55%;
-    padding: 10px 0;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-   
+.titulo-card{
+    color: #914cc5;
+    font-weight: bolder;
+    font-size: 30px;
 }
 
-.texto{
+.texto-card{
     font-size: 15px;
-    text-align: center;
-    padding: 10px 5px;
     color: white;
+    padding: 10px 0;
+}
+
+.img-card-blackjack{
+    width: 350px;
+    height: 230px;
+}
+
+.img-card-mentalist{
+    width: 180px;
+    height: 300px;
+}
+
+.img-card-resenha{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+}
+
+.botao-card{
+    width: 120px;
+    height: 40px;
+    border-radius: 10%;
+    border: 2px solid black;
+    background-color: orange;
+    color: white;
+}
+
+.botao-card:hover{
+    background-color: rgb(214, 121, 0);
+}
+
+.botao-card:active{
+    background-color: rgb(224, 94, 7);
 }
 
 .rodape-pagina{
