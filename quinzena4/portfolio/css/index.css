@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto',sans-serif;
+   
+}
+
+.cabecalho-pagina{
+    background-color:#270f38;
+}
+
+.cabecalho-links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+    padding: 15px 15px; 
+}
+
+.links{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: grey;
+    font-weight: bolder;
+    padding: 0 20px;
+}
+
+.links:hover{
+    color: crimson;
+}
+
+.conteudo-pagina{
+    flex-grow: 1;
+    background-color:#321249;
+    display:flex;
+    flex-direction: column;
+}
+
+.card-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #290f3c;
+}
+
+.card-nome-profissao{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titulo-conteudo {
+    color: #914cc5;
+    padding: 20px 0;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.subtitulo-conteudo{
+    color:mediumpurple;
+    padding: 20px 20px;
+    font-size: 35px;
+}
+
+.card-secundario{
+    display: flex;
+    flex-direction: column;
+    background-color: #321249;
+   
+}
+
+.subtitulo-secundario, .text{
+    color: white;
+}
+
+.subtitulo-secundario{
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 10px;
+    text-align: center;
+}
+
+.text{
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 45px;
+}
+
+.img-foto-perfil{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 60px 60px;
+}
+
+.rodape-pagina{
+    background-color: #3a1455 ;
+}
+
+.card-redes-sociais{
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.link-redes-sociais{
+    padding: 10px 10px;
+}
