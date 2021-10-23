@@ -62,8 +62,8 @@
 
 .titulo-card{
     color: #914cc5;
-    font-weight: bolder;
     font-size: 30px;
+    padding: 10px 0;
 }
 
 .texto-card{
@@ -75,17 +75,20 @@
 .img-card-blackjack{
     width: 350px;
     height: 230px;
+    box-shadow: 2px 2px 5px 5px #450a54;
 }
 
 .img-card-mentalist{
     width: 180px;
     height: 300px;
+    box-shadow: 2px 2px 5px 5px #450a54;
 }
 
 .img-card-resenha{
     width: 150px;
     height: 150px;
     border-radius: 10%;
+    box-shadow: 2px 2px 5px 5px #450a54;
 }
 
 .botao-card{
