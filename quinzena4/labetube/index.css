@@ -28,7 +28,7 @@
 }
 
 #busca{
-    width:100px;
+    width:200px;
     height: 30px;
     margin-right: 100px;
 }
@@ -36,6 +36,7 @@
     height: 220px;
     box-shadow: 1px 1px 2px 2px darkgrey;
     background-color: rgb(187, 148, 113);
+    text-align: center;
 }
 
 .subtitulo-card{
@@ -47,9 +48,8 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 20px;
     justify-items: center;
-    
     padding: 50px 20px;
-    background-color: rgb(240, 209, 180);
+    background-color: rgb(247, 230, 215);
 }
 
 .img-midia{
