@@ -5,6 +5,9 @@
 
 .page-container{
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+
 }
 .cabecalho{
     display: flex;
@@ -20,12 +23,29 @@
     height: 30px;
     margin-right: 50px;
 }
+.card-video{
+    height: 200px;
+}
+.conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 20px 20px;
+    padding: 0 20px;
+}
+
+.img-midia{
+    height: 150px;
+    width: 230px;
+}
 
 .rodape{
     height: 60px;
     background-color: rgb(247, 175, 94);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.subtitulo-rodape{
-    text-align: center;
-}
