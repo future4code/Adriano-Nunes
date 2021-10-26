@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.page-container{
+    font-family: 'Roboto', sans-serif;
+}
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    height: 100px;
+    background-color: rgb(247, 175, 94);
+}
+
+#busca{
+    width:100px;
+    height: 30px;
+    margin-right: 50px;
+}
+
+.rodape{
+    height: 60px;
+    background-color: rgb(247, 175, 94);
+}
+
+.subtitulo-rodape{
+    text-align: center;
+}
