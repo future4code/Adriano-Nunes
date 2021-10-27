@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color:#321249;
+    font-family: 'Roboto',sans-serif; 
+}
+
+.cabecalho-pagina{
+    background-color:#270f38;
+}
+
+.cabecalho-links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+    padding: 15px 15px; 
+}
+
+.links{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: grey;
+    font-weight: bolder;
+    padding: 0 20px;
+}
+
+.links:hover{
+    color: crimson;
+}
+
+.conteudo-pagina{
+    flex-grow: 1;
+    background-color:#321249;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.formacao-biologo, .formacao-senac, .formacao-labenu{
+    padding: 30px 10px;
+}
+.formacao-senac{
+    grid-column: 3 / 4;
+    display: grid;
+}
+
+.formacao-biologo{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+    
+.img-logo-labenu{
+    width: 400px;
+    height: 150px;
+    padding: 10px 0;
+}
+
+.img-logo-senac{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px 0;
+}
+
+.img-link{
+   display: grid;
+   justify-content: center;
+}
+
+.img-logo-biologo{
+    border-radius: 55%;
+    padding: 10px 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto{
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 5px;
+    color: white;
+}
+
+.subtitulo-habilidades{
+    font-size: 25px;
+    
+    color: #914cc5;
+    padding: 5px 0;
+}
+
+.informacoes-habilidades{
+    font-size: 15px;
+    color: white;
+    padding: 10px 0;
+}
+
+.habilidades{
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+}
+
+.img-habilidades{
+    width: 300px;
+    height: 150px;
+    margin-left: 60px;
+    box-shadow: 2px 2px 5px 5px #450a54;
+}
+
+.rodape-pagina{
+    background-color: #3a1455 ;
+}
+
+.card-redes-sociais{
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.link-redes-sociais{
+    padding: 10px 10px;
+}
