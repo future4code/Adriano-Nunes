@@ -79,7 +79,7 @@
     width: 60vw;    
 }
 
-@media screen and (min-device-width: 100px) and (max-device-width: 520px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 520px) {
     .cabecalho{
         display: flex;
         flex-direction: column;
@@ -128,6 +128,37 @@
 
     .video{
         width: 90vw;
-        
+    }
+}
+
+@media screen and (min-device-width: 521px) and (max-device-width: 800px) {
+    #busca{
+        width: 30vw;
+    }
+
+    .conteudo{
+        display: grid;
+        grid-template-columns: 1fr 1fr
+    }
+
+    .card-video{
+        width: 40vw;
+    }
+
+    .img-midia{
+        width: 40vw; 
+    }
+
+    .video{
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .conteudo-video{
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
     }
 }
