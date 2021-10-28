@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.page-container{
+    font-family: 'Roboto', sans-serif;
+}
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 20vh;
+    background-color: burlywood;
+}
+
+.link-cabecalho{
+    text-decoration: none;
+    color: black;
+}
+
+.link-cabecalho:hover{
+    color: brown;
+}
+
+#busca{
+    width: 15vw;
+    height: 5vh;
+}
