@@ -27,3 +27,23 @@
     width: 15vw;
     height: 5vh;
 }
+
+.conteudo{
+    display: grid;
+    height: 80vh;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2vw;
+}
+
+.img-midia{
+    width: 20vw;
+    height: 20vh;
+
+}
+
+.rodape{
+    height: 10vh;
+    background-color: coral;
+    text-align: center;
+    padding-top: 5vh;
+}
