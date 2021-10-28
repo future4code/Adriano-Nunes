@@ -11,10 +11,10 @@
     align-items: center;
     padding: 0 50px;
     height: 20vh;
-    background-color: burlywood;
+    background-color: rgb(2, 83, 88);
 }
 
-.link-cabecalho{
+.link-cabecalho, .link-conteudo{
     text-decoration: none;
     color: black;
 }
@@ -32,18 +32,32 @@
     display: grid;
     height: 80vh;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 2vw;
+    background-color: rgb(207, 233, 235);
+}
+
+.card-video{
+    border: 1px outset black;
+    box-shadow: 1px 1px 2px 2px darkgrey;
+    width: 20vw;
+    height: 28vh;
+    margin: 20px 20px;
+    background-color:rgb(232, 236, 236)
 }
 
 .img-midia{
     width: 20vw;
     height: 20vh;
+}
+
+.subtitulo-card{
+    text-align: center;
+    padding-top: 10px;
 
 }
 
 .rodape{
     height: 10vh;
-    background-color: coral;
+    background-color: rgb(2, 83, 88);
     text-align: center;
     padding-top: 5vh;
 }
