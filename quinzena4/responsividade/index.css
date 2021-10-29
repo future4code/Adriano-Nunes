@@ -91,7 +91,6 @@
     #busca{
         width: 50vw;
         height: 3vh;
-        margin-top: 1rem;
     }
 
     .conteudo{
@@ -103,8 +102,8 @@
     .card-video{
         display:flex;
         flex-direction: column;
-        width: 18rem;
-        height: 12rem;
+        width: 70vw;
+        height: 26vh;
     }
 
     .subtitulo-card{
@@ -112,12 +111,12 @@
     }
 
     .img-midia{
-        width: 18rem;
-        height: 10rem;
+        width: 70vw;
+        height: 20vh;
     }
 
     .subtitulo-rodape{
-        font-size: 1rem;
+        font-size: 2vh;
     }
 
     .rodape{
