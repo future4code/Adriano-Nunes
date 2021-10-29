@@ -1,0 +1,151 @@
+#Lago {
+    display: flex;
+    justify-content: flex-end
+}
+
+#Lago {
+    display: flex;
+    justify-content:center
+}
+
+#Lago {
+    display: flex;
+    justify-content: space-around
+}
+
+#Lago {
+    display: flex;
+    justify-content: space-between
+}
+
+#Lago {
+    display: flex;
+    align-items:flex-end
+}
+
+#Lago {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#Lago {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#Lago {
+    display: flex;
+     flex-direction: row-reverse
+}
+
+#Lago {
+    display: flex;
+     flex-direction: column
+}
+
+#Lago {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+#Lago {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#Lago {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+#Lago {
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+
+#pond {
+    display: flex;
+}
+  
+.yellow {
+    order:1
+}
+
+#pond {
+    display: flex;
+  }
+  
+.red {
+    order:-3
+}
+
+#pond {
+    display: flex;
+    align-items: flex-start;
+}
+  
+.yellow {
+    align-self: flex-end;
+}
+
+#pond {
+    display: flex;
+    align-items: flex-start;
+}
+  
+.yellow {
+    order: 2;
+    align-self: flex-end;
+}
+
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pond {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#pond {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end
+}
+
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
+}
+
+#pond {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    align-content: space-between;
+    justify-content: center;
+}
