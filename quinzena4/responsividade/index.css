@@ -24,7 +24,7 @@
 }
 
 #busca{
-    width: 15vw;
+    width: 25vw;
     height: 5vh;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .rodape{
-    height: 10vh;
+    height: 8vh;
     background-color: rgb(2, 83, 88);
     text-align: center;
     padding-top: 5vh;
@@ -85,10 +85,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 10vh;
     }
 
     #busca{
-        width: 10rem;
+        width: 50vw;
+        height: 3vh;
         margin-top: 1rem;
     }
 
@@ -117,6 +119,10 @@
     .subtitulo-rodape{
         font-size: 1rem;
     }
+
+    .rodape{
+        height: 3vh;
+    }
     
     .conteudo-video{
         height: 60vh;
@@ -132,8 +138,13 @@
 }
 
 @media screen and (min-device-width: 521px) and (max-device-width: 800px) {
+    .cabecalho{
+        height: 10vh;
+    }
+    
     #busca{
         width: 30vw;
+        height: 3vh;
     }
 
     .conteudo{
@@ -156,6 +167,47 @@
 
     .conteudo-video{
         height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+@media screen and (min-device-width: 801px) and (max-device-width: 1100px){
+    .cabecalho{
+        height: 10vh;
+    }
+
+    #busca{
+        width: 30vw;
+        height: 3vh;
+    }
+
+    .conteudo{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-video{
+        width: 36vw;
+        height: 25vh;
+    }
+
+    .img-midia{
+        width: 36vw;
+    }
+
+    .rodape{
+        height: 3vh;
+    }
+
+    .video{
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .conteudo-video{
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: start;
