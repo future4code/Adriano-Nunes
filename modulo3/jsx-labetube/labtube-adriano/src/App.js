@@ -67,7 +67,7 @@ function App() {
         </main>
 
         <footer>
-            <h4>Oi! Eu moro no footer!</h4>
+            <h4>Lab Tube! Sua nova plataforma de visualizar seus vídeos favoritos ♥</h4>
         </footer>
     </div>
   </div>
