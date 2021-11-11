@@ -19,5 +19,8 @@
 
 .littlecard-container > div {
     display: flex;
-   
+}
+
+.littlecard-container  p {
+    margin-left: 5px;
 }

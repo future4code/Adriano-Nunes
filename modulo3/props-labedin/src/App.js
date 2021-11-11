@@ -4,6 +4,7 @@ import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 import CardPequeno from './components/CardPequeno/CardPequeno';
 
+
 function App() {
   return (
     <div className="App">
@@ -32,6 +33,21 @@ function App() {
           imagem="https://i.pinimg.com/736x/96/5c/7e/965c7eedc399211edfd5d59d8ce179e5.jpg"
           nome="Localização:"
           descricao=" Canoas, Rio Grande do Sul, Brasil"
+        />
+      </div>
+
+      <div className="page-section-container">
+        <h2>Formação Acadêmica</h2>
+        <CardGrande 
+          imagem="https://clubedoassinanterbs.com.br/imagens/beneficio/large_beneficio20200117041445.png" 
+          nome="Graduando no Curso Tecnológico em Análise e Desenvolvimento de Sistemas" 
+          descricao="3º Semestre. Previsão de Conclusão: 12/2022. Instituição: SENAC/SP."
+        />
+
+        <CardGrande 
+          imagem="https://lh3.googleusercontent.com/proxy/-dW9EoZbQZqYz3WEggF2PYoU00ckYo3HvrixiqRpjz0FCgwT_16J0Y5U4rwnIFFtkZ0xYCR9t3hziIa_TLjNoslBBT95cUCHXOJG-O0oIGvO-w" 
+          nome="Graduado no Curso Superior de Ciências Biológicas" 
+          descricao="Conclusão: 01/2013. Instituição: Faculdade Cenecista de Osório/RS."
         />
       </div>
 
