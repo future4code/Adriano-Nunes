@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno from './components/CardPequeno/CardPequeno';
 
 function App() {
   return (
@@ -17,6 +18,20 @@ function App() {
         <ImagemButton 
           imagem="https://image.flaticon.com/icons/png/512/117/117472.png" 
           texto="Ver mais"
+        />
+      </div>
+
+      <div className="page-section-container">
+        <CardPequeno
+          imagem="https://www.caceres.mt.leg.br/banco-de-imagens/email.png/image"
+          nome="Email"
+          descricao="adrianobn.nunes@gmail.com"
+        />
+
+        <CardPequeno
+          imagem="https://i.pinimg.com/736x/96/5c/7e/965c7eedc399211edfd5d59d8ce179e5.jpg"
+          nome="Localização"
+          descricao="Canoas, Rio Grande do Sul, Brasil"
         />
       </div>
 
