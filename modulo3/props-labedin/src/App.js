@@ -24,14 +24,14 @@ function App() {
       <div className="page-section-container">
         <CardPequeno
           imagem="https://www.caceres.mt.leg.br/banco-de-imagens/email.png/image"
-          nome="Email"
-          descricao="adrianobn.nunes@gmail.com"
+          nome="Email:"
+          descricao= " adrianobn.nunes@gmail.com"
         />
 
         <CardPequeno
           imagem="https://i.pinimg.com/736x/96/5c/7e/965c7eedc399211edfd5d59d8ce179e5.jpg"
-          nome="Localização"
-          descricao="Canoas, Rio Grande do Sul, Brasil"
+          nome="Localização:"
+          descricao=" Canoas, Rio Grande do Sul, Brasil"
         />
       </div>
 
