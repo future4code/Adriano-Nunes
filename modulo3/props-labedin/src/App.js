@@ -1,10 +1,17 @@
 import React from 'react';
-import CardGrande from './components/CardGrande/CardGrande';
-import ImagemButton from './components/ImagemButton/ImagemButton';
-import CardPequeno from './components/CardPequeno/CardPequeno';
+import CardGrande from './components/CardGrande';
+import ImagemButton from './components/ImagemButton';
+import CardPequeno from './components/CardPequeno';
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
 
+  }
+`
 const AppContainerPrincipal = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,12 +29,10 @@ const SubtituloApp = styled.h2`
   margin-bottom: 20px;
 `
 
-
-
-
 function App() {
   return (
     <AppContainerPrincipal>
+      <GlobalStyle />
       <ContainerSecao>
         <SubtituloApp>Dados pessoais</SubtituloApp>
         <CardGrande 

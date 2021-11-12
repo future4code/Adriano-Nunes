@@ -7,7 +7,7 @@ const CardPequenoContainer = styled.div`
     border: 1px solid black;
     padding: 20px 10px;
     margin-bottom: 10px;
-    height: 100px;
+    height: 50px;
 `
 
 const ImagemPequenoCard = styled.img`
@@ -18,14 +18,18 @@ const ImagemPequenoCard = styled.img`
 
 const ContainerPequenoCardInfo = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
 `
 
 const SubtituloPequenoCard = styled.h4`
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 `
 
 const TextoPequenoCard = styled.p`
     margin-left: 5px;
+    
 `
 
 const CardPequeno = (props) => {
