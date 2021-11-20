@@ -29,9 +29,39 @@ class App extends React.Component {
         fotoUsuario: 'https://scontent.fpoa6-1.fna.fbcdn.net/v/t39.30808-6/248408265_4296466223795017_954500115779743590_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeFib21bt2Zf54TTgWS2hgREJxfJ3isAslknF8neKwCyWSvDOMV1YhaWYSgfid7XkUG1c7sxFF4mL1cK390FsBxd&_nc_ohc=TlNRbivlFuYAX9PX9rZ&_nc_ht=scontent.fpoa6-1.fna&oh=53feba8b9d9658df97fc1b7ecdbe607e&oe=619C2F37',
         fotoPost: 'https://picsum.photos/200/150?55'
       }
-    ]
+    ],
+
+    valorInputNomeUsuario: "",
+    valorInputFotoUsuario: "",
+    valorInputFotoPost:""
   }
 
+  adicionarPost = () => {
+    const newPost = {
+      nomeUsuario: this.state.valorInputNomeUsuario,
+      fotoUsuario: this.state.valorInputFotoUsuario,
+      fotoPost: this.state.valorInputFotoPost
+    }
+
+    const outrosPost = [...this.state.post, newPost];
+
+    this.setState({ post: outrosPost });
+    this.setState({ valorInputNomeUsuario: "" });
+    this.setState({ valorInputFotoUsuario: "" });
+    this.setState({ valorInputFotoPost: "" });
+  }
+
+  onChangeInputUsuario = (event) => {
+    this.setState({ valorInputNomeUsuario: event.target.value });
+  }
+
+  onChangeInputFotoPerfil = (event) => {
+    this.setState({ valorInputFotoUsuario: event.target.value });
+  }
+
+  onChangeInputFotoPost = (event) => {
+    this.setState({ valorInputFotoPost: event.target.value });
+  }
 
   render() {
     const novoPost = this.state.post.map((post)=>{
@@ -47,6 +77,25 @@ class App extends React.Component {
     return (
       <MainContainer>
         {novoPost}
+
+        <input
+          value={this.state.valorInputNomeUsuario}
+          onChange={this.onChangeInputUsuario}
+          placeholder={"Nome Usuário"}
+        />
+
+        <input
+          value={this.state.valorInputFotoUsuario}
+          onChange={this.onChangeInputFotoPerfil}
+          placeholder={"Insira sua imagem"}
+        />
+
+        <input
+          value={this.state.valorInputFotoPost}
+          onChange={this.onChangeInputFotoPost}
+          placeholder={"Insira sua imagem"}
+        />
+        <button onClick={this.adicionarPost}>Adicionar</button>
       </MainContainer>
     );
   }
