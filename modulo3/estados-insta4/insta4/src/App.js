@@ -9,6 +9,27 @@ const MainContainer = styled.div`
   align-items: center;
 `
 
+const InputAdicionar = styled.input`
+  width: 25vw;
+  height: 5vh;
+  margin-top: 5px;
+  padding: 2px;
+`
+
+const BotaoAdicionar = styled.button`
+  width: 12vw;
+  height: 8vh;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: orange;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darkorange;
+  }
+`
+
+
 class App extends React.Component {
   state = {
     post: [
@@ -78,24 +99,24 @@ class App extends React.Component {
       <MainContainer>
         {novoPost}
 
-        <input
+        <InputAdicionar
           value={this.state.valorInputNomeUsuario}
           onChange={this.onChangeInputUsuario}
           placeholder={"Nome Usuário"}
         />
 
-        <input
+        <InputAdicionar
           value={this.state.valorInputFotoUsuario}
           onChange={this.onChangeInputFotoPerfil}
           placeholder={"Insira sua imagem"}
         />
 
-        <input
+        <InputAdicionar
           value={this.state.valorInputFotoPost}
           onChange={this.onChangeInputFotoPost}
           placeholder={"Insira sua imagem"}
         />
-        <button onClick={this.adicionarPost}>Adicionar</button>
+        <BotaoAdicionar onClick={this.adicionarPost}>Adicionar</BotaoAdicionar>
       </MainContainer>
     );
   }
