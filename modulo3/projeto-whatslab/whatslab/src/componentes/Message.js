@@ -51,32 +51,24 @@ const HeaderImg = styled.img`
 `
 
 const MessegeSection = styled.section`
-    height: 80%;
+    height: 90%;
     width: 100%;
     background-color:#FFF8DC;
-`
-
-const MessegeFooter = styled.footer`
-    height: 10%;
-    width: 100%;
-    background-color: #D3D3D3;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
+    
 `
 
 const NomeUsuarioInput = styled.input`
     width: 30%;
     height: 50%;
     margin: 5px 2px;
-    
+    border: 0.5px solid black;
 `
 
 const MensagemInput = styled.input`
     width: 45%;
     height: 50%;
     margin: 5px 2px;
+    border: 0.5px solid black;
 `
 
 const ButtonSend = styled.button`
@@ -93,6 +85,13 @@ const ButtonSend = styled.button`
     }
 `
 
+const ContainerInput = styled.div`
+  width: 100%;
+  display: flex;
+  border: 2px solid black;
+  background-color: #D3D3D3;
+`
+
 class Message extends React.Component{
     state = {
         mensagens: [
@@ -101,37 +100,41 @@ class Message extends React.Component{
                mensagem: ""
            }
         ],
-
+    
         valorInputNomeUsuario: "",
         valorInputMensagem:""
     };
-
+    
     enviarMensagem = () => {
         const novaMensagem = {
             nomeUsuario: this.state.valorInputNomeUsuario,
-            email: this.state.valorInputMensagem
+            mensagem: this.state.valorInputMensagem
         };
-
+    
         const outraMensagem = [...this.state.mensagens, novaMensagem];
-        this.setState({ mensagens: novaMensagem });
-        this.setState({ valorInputNomeUsuario: ""});
-        this.setState({ valorInputMensagem: ""});
-    }
-
-    onChangeInputNomeUsuario = (event) => {
-        this.setState({ valorInputNomeUsuario: event.target.value });
-    }
-
-    onChangeInputMensagem = (event) => {
-        this.setState({ valorInputMensagem: event.target.value });
-    }
-
-    render(){
-        const listaDeMensagens = this.state.mensagens.map((mensagem)=> {
-            return (
-             
-                
-            );
+          this.setState({ mensagens: outraMensagem });
+          this.setState({ valorInputNomeUsuario: ""});
+          this.setState({ valorInputMensagem: ""});
+        } 
+    
+        onChangeInputNomeUsuario = (event) => {
+          this.setState({ valorInputNomeUsuario: event.target.value });
+        }
+    
+        onChangeInputMensagem = (event) => {
+          this.setState({ valorInputMensagem: event.target.value });
+        }
+    
+      render(){
+        const listaDeMensagem = this.state.mensagens.map((mensagem)=>{
+          return(
+              <p><br />
+              {mensagem.nomeUsuario}<br />
+              
+              {mensagem.mensagem}<br />
+              </p>
+          )
+          
         })
 
         return <MessageContainer>
@@ -149,10 +152,10 @@ class Message extends React.Component{
             </MessageHeader>
 
             <MessegeSection>
-                {listaDeMensagens}
+                {listaDeMensagem}
             </MessegeSection>
-
-            <MessegeFooter>
+            
+            <ContainerInput>
                 <NomeUsuarioInput
                     value={this.state.valorInputNomeUsuario}
                     onChange={this.onChangeInputNomeUsuario}
@@ -164,14 +167,13 @@ class Message extends React.Component{
                     onChange={this.onChangeInputMensagem}
                     placeholder={"Mensagem"}
                 />
-
-                <ButtonSend onClick={this.enviarMensagem}>Enviar</ButtonSend>
-            </MessegeFooter>
+                <ButtonSend onClick={this.enviarMensagem}>Enviar</ButtonSend>      
+            </ContainerInput>
+            
         </MessageContainer>
         
-    }
+     }
     
-
-}
+    }
 
 export default Message

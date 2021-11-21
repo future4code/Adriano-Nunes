@@ -6,6 +6,7 @@ import Message from './componentes/Message';
 
 const AppContainerPrincipal = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -13,17 +14,14 @@ const AppContainerPrincipal = styled.div`
   
 `
 
-
 class App extends React.Component {
-  render(){
-    return (
-      <AppContainerPrincipal>
-        <Message 
-        
-        />
-      </AppContainerPrincipal>
-    );
-  }
+    render(){
+      return (
+        <AppContainerPrincipal>
+          <Message/>
+        </AppContainerPrincipal>
+        );
+    }
 }
 
 export default App;
