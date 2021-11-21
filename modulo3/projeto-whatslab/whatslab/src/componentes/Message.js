@@ -72,6 +72,7 @@ const NomeUsuarioInput = styled.input`
     margin: 5px 2px;
     
 `
+
 const MensagemInput = styled.input`
     width: 45%;
     height: 50%;
@@ -91,9 +92,48 @@ const ButtonSend = styled.button`
         background-color: #696969;
     }
 `
+
 class Message extends React.Component{
+    state = {
+        mensagens: [
+           {
+               nomeUsuario: "",
+               mensagem: ""
+           }
+        ],
+
+        valorInputNomeUsuario: "",
+        valorInputMensagem:""
+    };
+
+    enviarMensagem = () => {
+        const novaMensagem = {
+            nomeUsuario: this.state.valorInputNomeUsuario,
+            email: this.state.valorInputMensagem
+        };
+
+        const outraMensagem = [...this.state.mensagens, novaMensagem];
+        this.setState({ mensagens: novaMensagem });
+        this.setState({ valorInputNomeUsuario: ""});
+        this.setState({ valorInputMensagem: ""});
+    }
+
+    onChangeInputNomeUsuario = (event) => {
+        this.setState({ valorInputNomeUsuario: event.target.value });
+    }
+
+    onChangeInputMensagem = (event) => {
+        this.setState({ valorInputMensagem: event.target.value });
+    }
 
     render(){
+        const listaDeMensagens = this.state.mensagens.map((mensagem)=> {
+            return (
+             
+                
+            );
+        })
+
         return <MessageContainer>
             <MessageHeader>
                 <LogoETitulo>
@@ -109,19 +149,23 @@ class Message extends React.Component{
             </MessageHeader>
 
             <MessegeSection>
-                
+                {listaDeMensagens}
             </MessegeSection>
 
             <MessegeFooter>
                 <NomeUsuarioInput
+                    value={this.state.valorInputNomeUsuario}
+                    onChange={this.onChangeInputNomeUsuario}
                     placeholder={"Nome"}
                 />
 
                 <MensagemInput
+                    value={this.state.valorInputMensagem}
+                    onChange={this.onChangeInputMensagem}
                     placeholder={"Mensagem"}
                 />
 
-                <ButtonSend>Enviar</ButtonSend>
+                <ButtonSend onClick={this.enviarMensagem}>Enviar</ButtonSend>
             </MessegeFooter>
         </MessageContainer>
         
