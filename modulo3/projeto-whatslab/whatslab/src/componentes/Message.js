@@ -60,8 +60,37 @@ const MessegeFooter = styled.footer`
     height: 10%;
     width: 100%;
     background-color: #D3D3D3;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
 `
 
+const NomeUsuarioInput = styled.input`
+    width: 30%;
+    height: 50%;
+    margin: 5px 2px;
+    
+`
+const MensagemInput = styled.input`
+    width: 45%;
+    height: 50%;
+    margin: 5px 2px;
+`
+
+const ButtonSend = styled.button`
+    width: 16%;
+    height: 65%;
+    border-radius: 10%;
+    margin: 5px 2px;
+    background-color: #A9A9A9;
+    color: white;
+    font-weight: bold;
+
+    &:active{
+        background-color: #696969;
+    }
+`
 class Message extends React.Component{
 
     render(){
@@ -80,13 +109,19 @@ class Message extends React.Component{
             </MessageHeader>
 
             <MessegeSection>
-                <p>msg</p>
+                
             </MessegeSection>
 
             <MessegeFooter>
-                
+                <NomeUsuarioInput
+                    placeholder={"Nome"}
+                />
 
-                <button>Enviar</button>
+                <MensagemInput
+                    placeholder={"Mensagem"}
+                />
+
+                <ButtonSend>Enviar</ButtonSend>
             </MessegeFooter>
         </MessageContainer>
         
