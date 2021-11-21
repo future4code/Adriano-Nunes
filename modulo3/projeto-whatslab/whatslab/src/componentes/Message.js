@@ -54,18 +54,23 @@ const MessegeSection = styled.section`
     height: 90%;
     width: 100%;
     background-color:#FFF8DC;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 0 5px;
     
 `
 
 const NomeUsuarioInput = styled.input`
-    width: 30%;
+    width: 20%;
     height: 50%;
     margin: 5px 2px;
     border: 0.5px solid black;
 `
 
 const MensagemInput = styled.input`
-    width: 45%;
+    width: 60%;
     height: 50%;
     margin: 5px 2px;
     border: 0.5px solid black;
@@ -79,6 +84,7 @@ const ButtonSend = styled.button`
     background-color: #A9A9A9;
     color: white;
     font-weight: bold;
+    
 
     &:active{
         background-color: #696969;
@@ -86,11 +92,13 @@ const ButtonSend = styled.button`
 `
 
 const ContainerInput = styled.div`
-  width: 100%;
-  display: flex;
-  border: 2px solid black;
-  background-color: #D3D3D3;
+    width: 100%;
+    display: flex;
+    background-color: #D3D3D3;
+    align-items: center;
+    justify-content: center;
 `
+
 
 class Message extends React.Component{
     state = {
@@ -129,7 +137,7 @@ class Message extends React.Component{
         const listaDeMensagem = this.state.mensagens.map((mensagem)=>{
           return(
               <p><br />
-              {mensagem.nomeUsuario}<br />
+              <strong>{mensagem.nomeUsuario}</strong> <br />
               
               {mensagem.mensagem}<br />
               </p>
