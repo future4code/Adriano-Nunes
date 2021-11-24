@@ -1,13 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
+const Titulo = styled.h1`
+    font-size: 20px;
+    text-transform: uppercase;
+`
+
+const FormContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+`
 
 export default class Etapa2 extends React.Component{
 
     render(){
         return(
-            <div>
-                <h1>Etapa 2 - Informações do Ensino Superior</h1>
+            <FormContainer>
+                <Titulo>Etapa 2 - Informações do Ensino Superior</Titulo>
             <ol>
                 <li>Qual o curso?</li>
                 <input />
@@ -17,7 +29,7 @@ export default class Etapa2 extends React.Component{
             </ol>
 
          
-            </div>
+            </FormContainer>
             
             
         )

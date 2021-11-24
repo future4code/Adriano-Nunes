@@ -6,6 +6,13 @@ import Etapa3 from './components/Etapa3';
 import Final from './components/Final';
 import React from 'react';
 
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 export default class App extends React.Component {
   state = {
     etapa: 1
@@ -33,10 +40,10 @@ export default class App extends React.Component {
   }
   render(){
     return (
-      <div>
+      <AppContainer>
         {this.renderizaEtapa()} 
         {this.state.etapa< 4 && <button onClick={this.irParaProximaEtapa}>Próxima Etapa</button>}
-      </div>
+      </AppContainer>
     );
   }
   
