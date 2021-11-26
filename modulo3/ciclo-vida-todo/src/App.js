@@ -22,8 +22,10 @@ class App extends React.Component {
     state = {
       tarefas: [],
       inputValue: '',
-      filtro: ''
+      filtro: 'pendentes'
     }
+
+
 
   componentDidUpdate() {
 
@@ -34,11 +36,20 @@ class App extends React.Component {
   };
 
   onChangeInput = (event) => {
+    this.setState({ inputValue: event.target.value })
 
   }
 
   criaTarefa = () => {
+    const tarefa = {
+      id: Date.now(), // Explicação abaixo
+      texto: this.state.inputValue,
+      completa: false // Indica se a tarefa está completa (true ou false)
+    }
 
+    const novasTarefas = [...this.state.tarefas, tarefa];
+    this.setState({ tarefas: novasTarefas });
+    this.setState({ inputValue: ""});
   }
 
   selectTarefa = (id) => {
