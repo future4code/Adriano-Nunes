@@ -53,7 +53,7 @@ export default class Catalago extends React.Component{
 
         return(
             <div key={listaDePlaylist.id}>
-                <h2>Quantidade de Playlist: {playlist.length}</h2>
+                <h2>Quantidade de Playlist: {listaDePlaylist.length}</h2>
                 <p>{ listaDePlaylist } </p>
 
             </div>

@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import Catalogo from './components/Catalogo';
-import CriarPlaylist from '.components/CriarPlaylist';
+import CriarPlaylist from './components/CriarPlaylist';
 import React from 'react';
 
 
@@ -18,16 +18,16 @@ export default class App extends React.Component {
   render() {
     let mostrarLista = <h1>Erro!</h1>
     if(this.state.visualizarPlaylist){
-      visualizarPlaylist = <Catalogo />
+      mostrarLista = <Catalogo />
     } else {
-      visualizarPlaylist = ""
+      mostrarLista = ""
     }
 
     return(
       <div>
         <CriarPlaylist />
-        <button onClick= {this.mostrarLista}>Playlist</button>
-        {visualizarPlaylist}
+        <button onClick= {this.alterarVisualizacaoPlaylist}>Mostrar Playlist</button>
+        {mostrarLista}
       </div>
     )
   }
