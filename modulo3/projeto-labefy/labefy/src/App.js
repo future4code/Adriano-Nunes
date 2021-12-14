@@ -3,14 +3,32 @@ import './App.css';
 import axios from 'axios';
 import Catalogo from './components/Catalogo';
 import CriarPlaylist from '.components/CriarPlaylist';
+import React from 'react';
 
 
-function App() {
-  return (
-    <div className="App">
-     
-    </div>
-  );
+export default class App extends React.Component {
+  state = {
+   visualizarPlaylist: false
+  }
+
+  alterarVisualizacaoPlaylist = () => {
+    this.state.visualizarPlaylist ? this.setState({ visualizarPlaylist: false}) : this.setState({ visualizarPlaylist: true })
+  }
+
+  render() {
+    let mostrarLista = <h1>Erro!</h1>
+    if(this.state.visualizarPlaylist){
+      visualizarPlaylist = <Catalogo />
+    } else {
+      visualizarPlaylist = ""
+    }
+
+    return(
+      <div>
+        <CriarPlaylist />
+        <button onClick= {this.mostrarLista}>Playlist</button>
+        {visualizarPlaylist}
+      </div>
+    )
+  }
 }
-
-export default App;
