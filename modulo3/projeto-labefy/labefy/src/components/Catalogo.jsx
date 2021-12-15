@@ -47,7 +47,6 @@ export default class Catalago extends React.Component{
     render(){
         let listaDePlaylist = this.state.playlist.map((playlist) => {
             return <p>Nome:{playlist.name} <button onClick={() => this.deletePlaylist(playlist.id)}>Apagar</button>
-            ID: {playlist.id} 
             </p>
         })
 

@@ -23,7 +23,7 @@ export default class AdicionarMusicas extends React.Component{
         this.setState({ enderecoURL: e.target.value })
     }
 
-    AdicionarFaixas (id) => {
+    AdicionarFaixas = (id) => {
         let URL = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}/tracks`
 
         let body = {
@@ -56,10 +56,10 @@ export default class AdicionarMusicas extends React.Component{
                     <input placeholder="Nome da Música" value={this.state.musica} onChange={this.inputAdicionarMusica}/>
                     <input placeholder="Nome do Artista/Banda" value={this.state.artista} onChange={this.inputAdicionarArtista}/>
                     <input placeholder="Link" value={this.state.enderecoURL} onChange={this.inputAdicionarFaixas}/>
+                    <button onClick={this.AdicionarFaixas}>Adicionar</button>
                 </div>
             </div>
         )
     }
-
 
 }

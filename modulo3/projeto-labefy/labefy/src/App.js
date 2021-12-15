@@ -4,6 +4,7 @@ import axios from 'axios';
 import Catalogo from './components/Catalogo';
 import CriarPlaylist from './components/CriarPlaylist';
 import React from 'react';
+import AdicionarMusicas from './components/AdicionarMusicas';
 
 
 export default class App extends React.Component {
@@ -28,6 +29,7 @@ export default class App extends React.Component {
         <CriarPlaylist />
         <button onClick= {this.alterarVisualizacaoPlaylist}>Mostrar Playlist</button>
         {mostrarLista}
+        <AdicionarMusicas/>
       </div>
     )
   }
