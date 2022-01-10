@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
+import styled from 'styled-components';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Match from './components/Match';
 
+const ContainerApp = styled.div `
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContainerApp>
+      <Header>
+       
+      </Header>
+
+     <Match>
+
+     </Match>
+
+      <Footer>
+
+      </Footer>
+    </ContainerApp>
   );
 }
 
