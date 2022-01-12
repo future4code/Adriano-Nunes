@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import Match from './components/Match';
 
 const ContainerApp = styled.div `
@@ -16,17 +14,10 @@ const ContainerApp = styled.div `
 function App() {
   return (
     <ContainerApp>
-      <Header>
-       
-      </Header>
+      <Match>
 
-     <Match>
+      </Match>
 
-     </Match>
-
-      <Footer>
-
-      </Footer>
     </ContainerApp>
   );
 }
