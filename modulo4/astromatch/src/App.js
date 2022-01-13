@@ -1,24 +1,56 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import './App.css';
-import Match from './components/Match';
+import Header from './components/Header';
+import HomeScreen from './components/HomeScreen';
+import MatchesScreen from './components/MatchesScreen';
 
-const ContainerApp = styled.div `
+const ContainerTela = styled.div `
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
-function App() {
+
+const ContainerApp = styled.div`
+  width: 35vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+`
+
+const App = () => {
+  const [currentScreen, setCurrentScreen] = useState('homeScreen');
+
+  const renderCurrentScreen = () => {
+    if(currentScreen === 'homeScreen'){
+      return <HomeScreen />
+    } else if(currentScreen === 'matchesScreen'){
+      return <MatchesScreen />
+    }
+  }
+
+  const changeScreen = (currentScreen) => {
+    setCurrentScreen(currentScreen)
+  }
+  
+
   return (
-    <ContainerApp>
-      <Match>
-
-      </Match>
-
-    </ContainerApp>
+    <ContainerTela>
+      
+      <ContainerApp>
+        
+        <Header changeScreen={changeScreen}/>
+        {renderCurrentScreen()}
+      
+      </ContainerApp>
+   
+    </ContainerTela>
+    
   );
 }
 
