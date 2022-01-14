@@ -61,6 +61,8 @@ const HomeScreen = (props) => {
     }, [])
 
     const chooseProfileMatch = () => {
+        const [profileMatch, setProfileMatch] = useState([])
+        
         const body = {
             id: "71gMbZs2txS9LDvGK5Ew",
             choice: true
