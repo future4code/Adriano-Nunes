@@ -1,7 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import { baseURL } from "../../constants"
+import { baseURL, axiosConfig } from "../../constants"
 import { DiCodeigniter } from "react-icons/di";
 import { IconButton, Box, Image, Badge } from "@chakra-ui/react";
 
@@ -60,6 +60,19 @@ const HomeScreen = (props) => {
         getProfile()
     }, [])
 
+    const chooseProfileMatch = () => {
+        const body = {
+            id: "71gMbZs2txS9LDvGK5Ew",
+            choice: true
+        }
+
+        axios
+            .post(`${baseURL}/choose-person`, body)
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err))
+    }
+
+
     return(
         <div>
             <HeaderContainer>
@@ -99,7 +112,7 @@ const HomeScreen = (props) => {
                 {/* {getProfile()} */}
                 <ButtonMatchContainer>
                     <ButtonNo>&#10007;</ButtonNo>
-                    <IconButton as={DiCodeigniter} />
+                    <IconButton as={DiCodeigniter} onClick={chooseProfileMatch}/>
                 </ButtonMatchContainer>
             
                 
