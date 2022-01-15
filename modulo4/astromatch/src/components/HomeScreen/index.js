@@ -59,19 +59,28 @@ const HomeScreen = (props) => {
     useEffect(() => {
         getProfile()
     }, [])
+    
+    const [profileMatch, setProfileMatch] = useState(true)
 
+    console.log(profileMatch)
     const chooseProfileMatch = () => {
-        const [profileMatch, setProfileMatch] = useState([])
-        
+              
         const body = {
-            id: "71gMbZs2txS9LDvGK5Ew",
-            choice: true
+            "id": profile.id,
+            "choice": true
         }
 
         axios
             .post(`${baseURL}/choose-person`, body)
             .then((res) => console.log(res))
             .catch((err) => console.log(err))
+
+        getProfile()
+    }
+    
+    const onClickChooseProfileMatch = () => {
+        setProfileMatch(!true)
+        getProfile()
     }
 
 
@@ -84,9 +93,9 @@ const HomeScreen = (props) => {
        
             <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
             
-                <Image src={profile.photo}  />
+                <Image src={profile.photo} />
                 <Box p='6'>
-                    <Box display='flex' alignItems='baseline'>
+                    <Box display='flex' alignItems='center'>
                         <Badge borderRadius='full' px='2' colorScheme='teal'>
                             New
                         </Badge>
@@ -98,22 +107,20 @@ const HomeScreen = (props) => {
                                 textTransform='uppercase'
                                 ml='2'
                             >
-                                {profile.name} beds &bull; {profile.age} baths
+                                {profile.name} - {profile.age} Anos
                             </Box>
                     </Box>
                     <Box>
                         {profile.bio}
                             <Box as='span' color='gray.600' fontSize='sm'>
-                                / wk
+                                - Bio
                             </Box>
                     </Box>
                 </Box>
             </Box>
 
-              
-                {/* {getProfile()} */}
                 <ButtonMatchContainer>
-                    <ButtonNo>&#10007;</ButtonNo>
+                    <ButtonNo onClick={onClickChooseProfileMatch}>&#10007;</ButtonNo>
                     <IconButton as={DiCodeigniter} onClick={chooseProfileMatch}/>
                 </ButtonMatchContainer>
             
