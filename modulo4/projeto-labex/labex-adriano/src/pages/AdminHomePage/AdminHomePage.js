@@ -1,10 +1,30 @@
 import React from "react"
+import { useHistory } from "react-router"
 
 const AdminHome = () => {
+    const history = useHistory()
+
+    const goToHomeAdmin = () => {
+        history.push("/")
+    }
+
+    const goToCreateTrip = () => {
+        history.push("/admin/trips/create")
+    }
+
+    const goToLogin = () => {
+        history.push("/login")
+    }
     return(
         <div>
             <h1>AdminHome</h1>
-            <iframe src="https://giphy.com/embed/qgQUggAC3Pfv687qPC" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dommespace-domme-space-programador-qgQUggAC3Pfv687qPC">via GIPHY</a></p>
+            
+            <div>
+                <button onClick={goToHomeAdmin}>VOLTAR</button>
+                <button onClick={goToCreateTrip}>CRIAR VIAGEM</button>
+                <button onClick={goToLogin}>LOGOUT</button>
+            </div>
+            
         </div>
     )
 }
