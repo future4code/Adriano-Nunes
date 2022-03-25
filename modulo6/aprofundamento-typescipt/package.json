@@ -1,0 +1,15 @@
+{
+  "name": "aprofundamento-typescipt",
+  "version": "1.0.0",
+  "description": "Exercícios de aprofundamento de typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "exercicio1": "tsc && node ./build/index.js"
+  },
+  "author": "Adriano Nunes",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  }
+}
