@@ -26,6 +26,7 @@ type Users = {
   website: string
 }
 
+//Exercício 3
 const listUser: Users[] = [
   {
     id: "1a2b",
@@ -49,3 +50,10 @@ const listUser: Users[] = [
     website: "www.joaosilencioso.ong.br"
   }
 ] 
+
+//Exercício 4
+app.get("/users", (req: Request, res:Response) => {
+    const users = listUser.map((user) => user);
+
+    res.send(users);
+})
