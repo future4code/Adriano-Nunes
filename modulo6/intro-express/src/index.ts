@@ -115,8 +115,28 @@ const listUser: Users[] = [
   }
 ]
 
-app.get("/users/post", (req: Request, res:Response) => {
-  const posts = listUser.map((post) => post);
+//Exercicio 7
+// app.get("/posts", (req: Request, res:Response) => {
+//   const posts = listUser.map((post) => post);
 
-  res.send(posts);
-})
+//   res.send(posts);
+// })
+
+//Exercicio 8
+app.get("/posts", (req: Request, res: Response) => {
+  const userId = req.query.id
+
+  if (!userId) {
+      res.status(400).send("Informar ID do usuário")
+  }
+
+  const users = listUser.map((user) => user);
+
+  let postUsers
+  users.forEach(post => {
+      if (post.id === userId) {
+          postUsers = post.post
+      }
+  })
+  res.send(postUsers)
+}) 
