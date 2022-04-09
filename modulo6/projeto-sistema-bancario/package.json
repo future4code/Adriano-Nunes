@@ -1,0 +1,25 @@
+{
+  "name": "projeto-sistema-bancario",
+  "version": "1.0.0",
+  "description": "Projeto Sistema Bancário",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "dev": "nodemon src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adrianobn.nunes",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "tsc": "^2.0.4",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0"
+  }
+}
