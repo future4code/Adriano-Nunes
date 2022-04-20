@@ -38,17 +38,66 @@ const searchActor = async (name: string): Promise<any> => {
   return result
 }
 
-app.get("/actor/name", async (req: Request, res: Response) => {
-  try {
-    const name = req.body.name
-    console.log(await searchActor(name))
-    res.end()
+//C)
+const countActor = async (gender: string): Promise<any> => {
+  const result = await connection.raw(`
+    SELECT COUNT (*) as count FROM Actor WHERE gender = "${gender}"
+  `)
 
-  } catch (error: any) {
-   console.log(error.message)
-    res.status(500).send("Unexpected error")
-  } 
-})
+  const count = result[0][0].count
+  return count
+  
+}
+
+//EXERCÍCIO 2
+const createActor = async (
+  id: string,
+  name: string,
+  salary: number,
+  dateOfBirth: Date,
+  gender: string
+): Promise<void> => {
+  await connection
+    .insert({
+      id: id,
+      name: name,
+      salary: salary,
+      birth_date: dateOfBirth,
+      gender: gender,
+    })
+    .into("Actor");
+};
+
+//A)
+const updateActor = async (
+  id: string,
+  salary: number
+  ) : Promise<any> => {
+    await connection("Actor")
+    .update({salary: salary})
+    .where("id", id)
+}
+
+//B)
+const deleteActor = async (
+  id: string
+  ) : Promise<void> => {
+    await connection("Actor")
+    .delete()
+    .where("id", id)
+}
+
+//C)
+const averageSalaryActor = async (
+  gender: string
+  ) : Promise<any> => {
+    const resultAVG = await connection("Actor")
+    .avg("salary as average")
+    .where({ gender })
+
+    return resultAVG[0].average;
+}
+
 
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
