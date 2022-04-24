@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 
-app.post("/user",async (req: Request, res: Response): Promise<void> => {
+app.post("/user", async (req: Request, res: Response) : Promise<void> => {
    const createUserName = req.body.name;
    const createUserNickName = req.body.nickname;
    const createUserEmail = req.body.email
@@ -38,6 +38,17 @@ app.post("/user",async (req: Request, res: Response): Promise<void> => {
         res.status(500).send(error.message)        
     }
 
+})
+
+app.get("/user/:id", async (req: Request, res: Response) : Promise<void> => {
+    try {
+        const getUserId = await connection("Users")
+        .where ({ id: req.params.id })
+
+        res.status(200).send(getUserId)
+    } catch (error: any) {
+        res.status(500).send(error.message)
+    }
 })
 
 
