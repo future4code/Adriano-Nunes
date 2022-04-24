@@ -1,0 +1,12 @@
+// Para requisições com body:
+// Content-Type: application/json 
+// Pule 1 linha
+// {}
+
+// Para requisições com headers: 
+// Authorization: "token"
+
+###
+//pega o ator pelo ID
+GET http://localhost:3003/actor/001
+
