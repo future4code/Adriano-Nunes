@@ -5,3 +5,13 @@
 
 // Para requisições com headers: 
 // Authorization: "token"
+
+###
+POST http://localhost:3003/user
+Content-Type: application/json 
+
+{
+    "name": "Adriano Nunes",
+    "nickname": "Branco",
+    "email": "adriano@adriano.uk"
+}
