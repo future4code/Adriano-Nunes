@@ -87,6 +87,29 @@ app.put("/user/edit/:id", async (req: Request, res: Response) : Promise<void> =>
      }
 })
 
+app.get("/task/:id", async (req: Request, res: Response) : Promise<void> => {
+    const getTaskId = req.params.id
+    
+    try {
+        const resultGetTaskId = await connection("Task")
+        .innerJoin(
+            "Users",
+            "Task.id",
+            "Users.id"
+        )
+        .select(
+            'Task.*', 'Users.nickname'
+        )
+        .where ({ 
+            "Task.id": getTaskId
+        })
+
+        res.status(200).send(resultGetTaskId)
+    } catch (error: any) {
+        res.status(500).send(error.message)
+    }
+})
+
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
     const address = server.address() as AddressInfo;
