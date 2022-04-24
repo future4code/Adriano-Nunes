@@ -17,4 +17,14 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3003/user/2
+GET http://localhost:3003/user/3
+
+###
+PUT http://localhost:3003/user/edit/3
+Content-Type: application/json 
+
+{
+    "name": "Keianne Degaspari Zaze",
+    "nickname": "Kei",
+    "email": "keianne@zaze.ped.br"
+}
