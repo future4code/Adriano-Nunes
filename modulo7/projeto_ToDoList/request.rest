@@ -1,0 +1,31 @@
+// Para requisições com body:
+// Content-Type: application/json 
+// Pule 1 linha
+// {}
+
+// Para requisições com headers: 
+// Authorization: "token"
+
+### CRIAR USUÁRIO
+POST http://localhost:3003/user
+Content-Type: application/json 
+
+{
+    "name": "Keianne Zaze",
+    "nickname": "Kei",
+    "email": "keianne@zaze.ped.br"
+}
+
+### PEGAR USUÁRIO PELO ID
+GET http://localhost:3003/user/3
+
+### EDITAR USUÁRIO
+PUT http://localhost:3003/user/edit/1
+Content-Type: application/json 
+
+{
+    "name": "Adriano Becco Nunes"
+}
+
+### PEGAR TAREFA PELO ID
+GET http://localhost:3003/task/1
