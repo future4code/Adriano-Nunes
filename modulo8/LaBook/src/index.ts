@@ -1,11 +1,13 @@
 /**************************** IMPORTS ******************************/
 
-import express, { Express, Request, Response } from "express"
-import cors from "cors"
+import { Request, Response } from "express"
+
 import knex from "knex"
 import dotenv from "dotenv"
-import { v4 } from "uuid"
+
 import Knex from "knex"
+import { generateId } from "./services/generateID"
+import { app } from "./controller/app"
 
 /**************************** CONFIG ******************************/
 
@@ -23,9 +25,7 @@ export const connection: Knex = knex({
    }
 })
 
-const app: Express = express()
-app.use(express.json())
-app.use(cors())
+
 
 /**************************** TYPES ******************************/
 
@@ -56,7 +56,6 @@ type post = {
 
 /**************************** SERVICES ******************************/
 
-const generateId = (): string => v4()
 
 /**************************** ENDPOINTS ******************************/
 
