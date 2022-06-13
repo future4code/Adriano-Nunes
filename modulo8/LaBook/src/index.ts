@@ -54,8 +54,6 @@ type post = {
    authorId: string
 }
 
-/**************************** SERVICES ******************************/
-
 
 /**************************** ENDPOINTS ******************************/
 
@@ -147,10 +145,4 @@ app.get('/posts/:id', async (req: Request, res: Response) => {
       res.statusCode = 400
       res.send({ message })
    }
-})
-
-/**************************** SERVER INIT ******************************/
-
-app.listen(3003, () => {
-   console.log("Server running on port 3003")
 })
