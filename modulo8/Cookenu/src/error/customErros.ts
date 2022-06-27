@@ -4,6 +4,24 @@ export class CustomError extends Error {
     }
 }
 
+export class UserNotFound extends CustomError {
+    constructor() {
+        super(400, "Usuário não encontrado!")
+    }
+}
+
+export class UserNotAdded extends CustomError {
+    constructor() {
+        super(400, "Usuário não adicionado!")
+    }
+}
+
+// export class FriendNotFound extends CustomError {
+//     constructor() {
+//         super(400, "Amigo não encontrado!")
+//     }
+// }
+
 export class RequiredName extends CustomError {
     constructor() {
         super(400, "O campo NOME é obrigatório!")
